@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions - Vintage Newspaper Layout</title>
+    <style>
+        /*Fonts*/
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300..700&display=swap');
+
+        /* General Styling */
+        body {
+            font-family: "Playfair Display", serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/asset/news.jpg');
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #dad7c2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #b1ae92;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            text-transform: uppercase;
+            color: #7b682b;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.8rem;
+            margin-top: 20px;
+            color: #60501c;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        ol, ul {
+            margin: 10px 0 20px 20px;
+            padding-left: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: left;
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            color: #7b682b;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: "Playfair Display", serif;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #504214;
+        }
+
+        .line {
+            border: 0;
+            border-top: 2px solid #000;
+            width: 100%;
+        }
+
+
+        .carousel {
+            width: 100%;
+            background: #2e2b26;
+            color: #d4c9a3;
+            font-size: 1.4em;
+            font-family: "Playfair Display", serif;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px 0;
+            overflow: hidden;
+            border-top: 2px solid #7b682b;
+            border-bottom: 2px solid #7b682b;
+            position: relative;
+        }
+
+        .carousel-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Carousel -->
+    <div class="carousel">
+        <div class="carousel-text">
+            REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE
+        </div>
+    </div>
+
+    <!-- Instruction Container -->
+    <div class="container">
+
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="/">Home</a>
+            <a href="/instructions" class="instructions">Instructions</a>
+            <a href="/about" class="about">About</a>
+            <a href="https://www.kaggle.com/c/fake-news/data" class="dataset">Dataset</a>
+        </div>
+
+        <hr class="line">
+
+        <h1>Instructions</h1>
+        <p>Follow these steps to detect whether the news article is real or fake:</p>
+
+        <h2>Step 1: Enter the Article</h2>
+        <p>Copy and paste the news article you want to check into the provided text box.</p>
+
+        <h2>Step 2: Submit</h2>
+        <p>Click on the "Check News" button to analyze the article.</p>
+
+        <h2>Step 3: Review Results</h2>
+        <p>The system will provide the following:</p>
+        <ul>
+            <li>A prediction on whether the article is real or fake.</li>
+            <li>Additional details about the analysis, such as confidence levels.</li>
+        </ul>
+
+        <h2>Important Notes:</h2>
+        <ol>
+            <li>Ensure the article text is clear and complete for accurate analysis.</li>
+            <li>Results are based on trained datasets and may not be 100% accurate.</li>
+        </ol>
+    </div>
+
+    <!-- Bottom Carousel -->
+    <div class="carousel">
+        <div class="carousel-text">
+            REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE
+        </div>
+    </div>
+
+</body>
+
+</html>

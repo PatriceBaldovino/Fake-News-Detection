@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Fake News Detector</title>
+    <style>
+        /*Fonts*/
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300..700&display=swap');
+
+        /* General Styling */
+        body {
+            font-family: "Playfair Display", serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/asset/news.jpg');
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #dad7c2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #b1ae92;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            text-transform: uppercase;
+            color: #7b682b;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.8rem;
+            margin-top: 20px;
+            color: #60501c;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        ul {
+            margin: 10px 0 20px 20px;
+            padding-left: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: left;
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            color: #7b682b;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: "Playfair Display", serif;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #504214;
+        }
+
+        .line {
+            border: 0;
+            border-top: 2px solid #000;
+            width: 100%;
+        }
+
+        .carousel {
+            width: 100%;
+            background: #2e2b26;
+            color: #d4c9a3;
+            font-size: 1.4em;
+            font-family: "Playfair Display", serif;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px 0;
+            overflow: hidden;
+            border-top: 2px solid #7b682b;
+            border-bottom: 2px solid #7b682b;
+            position: relative;
+        }
+
+        .carousel-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Carousel -->
+    <div class="carousel">
+        <div class="carousel-text">
+            REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE
+        </div>
+    </div>
+
+    <!-- Content Container -->
+    <div class="container">
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="/">Home</a>
+            <a href="/instructions" class="instructions">Instructions</a>
+            <a href="/about" class="about">About</a>
+            <a href="https://www.kaggle.com/c/fake-news/data" class="dataset">Dataset</a>
+        </div>
+
+        <hr class="line">
+
+        <!-- About Section -->
+        <h1>About This Website</h1>
+        <p>Welcome to the Fake News Detection website! In today’s world, the rapid spread of misinformation poses a
+            significant challenge. This website aims to address this issue by helping users analyze news articles and
+            determine their authenticity.</p>
+
+        <h2>What We Do</h2>
+        <p>This platform allows you to input a news article and receive a prediction on whether it is likely to be real
+            or fake. By leveraging advanced machine learning techniques, I aim to assist in identifying misinformation
+            quickly and efficiently.</p>
+
+        <h2>How It Works</h2>
+        <ul>
+            <li>The website uses a trained machine learning model, built on a dataset of verified and fake news
+                articles.</li>
+            <li>When you submit an article, the model analyzes its content for patterns and features indicative of real
+                or fake news.</li>
+            <li>Results are generated based on probabilities, offering you insights into the credibility of the article.
+            </li>
+        </ul>
+
+        <h2>About the Project</h2>
+        <p>This is a machine learning project designed to explore the capabilities of natural language processing (NLP)
+            in identifying misinformation. The goal is to contribute to a more informed society by providing a tool to
+            assist in critical evaluation of news content.</p>
+
+    </div>
+
+    <!-- Bottom Carousel -->
+    <div class="carousel">
+        <div class="carousel-text">
+            REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE
+        </div>
+    </div>
+
+</body>
+
+</html>

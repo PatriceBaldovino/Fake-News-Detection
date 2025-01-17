@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Newspaper Layout</title>
+    <style>
+        /*Fonts*/
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300..700&display=swap');
+
+        /* General Styling */
+        body {
+            font-family: "Playfair Display", serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/asset/news.jpg');
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #dad7c2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #b1ae92;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .left-column {
+            padding-right: 20px;
+            border-right: 2px solid #b1ae92;
+        }
+
+        .right-column {
+            padding-left: 20px;
+        }
+
+        .np_text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 2rem;
+            margin: 4px 0;
+        }
+
+        .np_text p {
+            font-family: "Playfair Display", serif;
+            font-size: 15px;
+        }
+
+        .styled-line1 {
+            border: 0;
+            border-top: 6px solid #000;
+            width: 100%;
+            margin: 2px auto;
+        }
+
+        .styled-line2 {
+            border: 0;
+            border-top: 2px solid #000;
+            width: 100%;
+            margin: 4px auto;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            text-transform: uppercase;
+            color: #7b682b;
+            font-size: 3.9rem;
+            margin: .9rem 0;
+        }
+
+        .border_line,
+        .nav_line {
+            border: 0;
+            border-top: 2px solid #000;
+            width: 100%;
+        }
+
+        .mini_title {
+            font-family: "Teko", serif;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1.3rem;
+            margin: 4px 0;
+        }
+
+        .subheadline {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .prg {
+            margin: 2px 0;
+            font-size: 1rem;
+        }
+
+        .nav a {
+            padding-right: 25px;
+            color: #7b682b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Style for the textarea */
+        textarea.form-control {
+            background-color: #f0f8ff;
+            margin-top: 10px;
+            color: #333;
+            width: 96%;
+            height: 25px;
+            /* Dark text */
+            border: 2px solid #7b682b;
+            padding: 10px;
+            /* Inner spacing */
+            font-size: 13px;
+            /* Larger font size for readability */
+            resize: none;
+            /* Disable resizing */
+            outline: none;
+            /* Remove default outline on focus */
+        }
+
+        /* Change textarea style on focus */
+        textarea.form-control:focus {
+            border-color: #7b682b;
+            /* Darker blue border */
+            box-shadow: 0 0 5px #988237;
+            /* Subtle glow effect */
+        }
+
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #7b682b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-family: "Playfair Display", serif;
+        }
+
+        button:hover {
+            background-color: #60501c;
+        }
+
+        .result {
+            margin: 5px 0;
+            font-size: 6.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #60501c;
+        }
+
+        /* Carousel Styling */
+        .carousel {
+            width: 100%;
+            background: #2e2b26;
+            /* Dark background to reflect vintage ink */
+            color: #d4c9a3;
+            /* Off-white text to resemble aged paper */
+            font-size: 1.4em;
+            font-family: "Playfair Display", serif;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px 0;
+            overflow: hidden;
+            border-top: 2px solid #7b682b;
+            /* Dark brown borders for a vintage touch */
+            border-bottom: 2px solid #7b682b;
+            position: relative;
+        }
+
+        .carousel-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Carousel -->
+    <div class="carousel">
+        <div class="carousel-text">
+            REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE ·
+            REAL or FAKE
+        </div>
+    </div>
+
+    <!-- Content Container -->
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="np_text">
+                <div class="np_title">
+                    <p>Newspaper name</p>
+                </div>
+                <div class="np_era">
+                    <p>Year create</p>
+                </div>
+            </div>
+            <hr class="styled-line1">
+            <hr class="styled-line2">
+            <h1>News Detection</h1>
+            <hr class="border_line">
+            <p class="mini_title">Is it Real or Fake?</p>
+            <img src="/static/asset/old_image.jpg">
+            <p class="prg">In today’s digital age, fake news has become a widespread phenomenon, fueled by the rapid
+                growth of
+                social media platforms. Misinformation and disinformation can spread like wildfire, reaching millions
+                within minutes.</p>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <img src="/static/asset/old_image2.jpg">
+            <div class="nav_bar">
+                <div class="nav">
+                    <a href="/instructions" class="instructions">Instructions</a>
+                    <a href="/about" class="about">About</a>
+                    <a href="https://www.kaggle.com/c/fake-news/data" class="dataset">Dataset</a>
+                </div>
+                <hr class="nav_line">
+                </hr>
+            </div>
+            <form method="POST" action="/predict" class="mt-4">
+                <div class="form-group">
+                    <textarea class="form-control" name="news_article" rows="5"
+                        placeholder="Enter the news article here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Check News</button>
+            </form>
+            {% if prediction_text %}
+            <div class="alert alert-info mt-4">
+                <h4 class="result">{{ prediction_text }}</h4>
+                <p>{{ info_text }}</p>
+                <p>{{ confidence_text }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Bottom Carousel -->
+    <div class="carousel">
+        <div class="carousel-text">
+            REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE · REAL or FAKE ·
+            REAL or FAKE
+        </div>
+    </div>
+
+</body>
+
+</html>
